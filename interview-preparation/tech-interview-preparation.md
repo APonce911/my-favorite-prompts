@@ -58,18 +58,24 @@ Present the complete response in this exact order:
         
 7.  **Proposed MVP System Architecture:**
     
-    -   **Objective:** Design a simple, viable system architecture that directly addresses the primary technical challenges from Part 5.
+    -   **Objective:** Design a simple, viable system architecture that directly addresses the primary technical challenges from Part 5.
         
-    -   **Principles:** Apply Clean Architecture (separation of concerns, dependency inversion) and design system best practices (scalability, maintainability).
+    -   **Principles:** Apply Clean Architecture (separation of concerns, dependency inversion) and design system best practices (scalability, maintainability).
         
-    -   **Scope & Detail:** List essential services/components and their functions. Describe integration points. **Do not overcomplicate;** focus on the Minimum Viable Product.
+    -   **Scope & Detail:** List essential services/components and their functions. Describe integration points. **Do not overcomplicate;** focus on the Minimum Viable Product.
         
-    -   **Modeling:** Use the C4 model (Context, Container, and Component diagrams as necessary) to describe the architecture. Use clear text descriptions or simple ASCII/unicode diagrams. Explain the choice of each major component.
+    -   **Modeling:** Use the C4 model (Context, Container, and Component diagrams as necessary) to describe the architecture. You must provide a visual system diagram.
+
+    -   **Preferred Format** Generate the diagram using Mermaid.js syntax for clarity and easy rendering.
+
+    -   **Acceptable Alternative** If Mermaid is unsuitable, provide a clean, well-structured ASCII/unicode art diagram.
         
-    -   **Integration Narrative:** Briefly describe how data and control flow between the main services.
+    -   **Integration Narrative:** Briefly describe how data and control flow between the main services.
+
+    -   **Requirement:** The diagram must visually show the main services, data stores, and the flow of data/requests between them. Do not rely solely on text descriptions.
         
-    -   **Verification Statement:** Explicitly state that the design has been iterated upon (by you or the `Expert Systems Architect`) to ensure all MVP-critical components are present with minimal complexity.
-        
+    -   **Verification Statement:** Explicitly state that the design has been iterated upon (by you or `Expert Systems Architect`) to ensure all MVP-critical components are present with minimal complexity.
+
 **Constraints**
 *   **Reading Time Adherence:** Strictly modulate the depth and breadth of content to match the user's selected version (Short vs. Detailed). The Short version (15-min read) covers essential concepts concisely. The Detailed version (45-min read) includes deeper explanations, more examples, and broader context.
 
