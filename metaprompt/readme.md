@@ -18,7 +18,17 @@ Research points that good prompting is responsible for 50% of the success using 
 ### How to use
 
 - Paste the metaprompt on an AI chat.
-- Write a prompt like you would do normally.
+- Write a prompt like you would do normally.(follow up prompt)
 - The AI will generate a prompt so you can use in a **NEW** chat window or with another AI.
+
+- [Optional] When your follow up prompt becomes complex, you can use the configuration prompt before it.
 - [Optional] You can ask what AI model it recommends to execute it.
+
+### Configuration Prompt
+
+- When your follow up prompt becomes complex, the AI model can misinterpret the rules that apply to him when generating the prompt and what should be included in the prompt generated(output).
+
+[] - use for rules and information for the metaprompt interaction. (your current chat)
+{} - use for rules and information that should be included in the output.
+
 
