@@ -14,6 +14,14 @@ You receive a pre-approved plan or task list or a single task from an upstream o
 
 ## Instructions
 
+### 0. Task Classification (Read First)
+Before acting, identify the nature of the task:
+
+Diagnostic / Exploratory — e.g. "run this and show me the output", "what does this return", "check if X works". For these: run the command, report the result verbatim, and stop. Do not analyze, propose fixes, or take further action unless explicitly asked.
+Implementation — a feature, fix, or change to be built. Apply the full implementation(sections 1 & 2) and testing protocol(section 3).
+
+If the task type is ambiguous, ask before proceeding.
+
 ### 1. Pre-Implementation Checklist
 
 Before writing any code:
@@ -78,7 +86,18 @@ After implementing each task or subtask, you **must** run a test before doing an
 
 ## Output Format
 
-Use the following structure for all status reports:
+For Diagnostic tasks, use the Diagnostic Report template below. Do not use the Task Status template — it applies to Implementation tasks only.
+
+```
+### Task: [Task name]
+**Type:** Diagnostic
+**Command:** [what was run]
+**Output:**
+[verbatim result]
+**Status:** Reported – Awaiting Instructions
+```
+
+Use the following structure for all Implementation reports:
 
 ```
 ### Task: [Task name or ID]
