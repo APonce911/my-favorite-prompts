@@ -27,31 +27,35 @@ Updating this field directly achieves the same result as `/rename` without inter
 
 ## Implementation
 
-### Single Session Rename
+The logic lives in [`rename_session.py`](./rename_session.py) — this file is the **single source of truth**.
+
+### Usage Examples
+
+```bash
+# Command-line arguments (preferred)
+./rename_session.py ses_25dd535caffemzyEEcQaZZFdqZ "Index page redesign & centered search"
+
+# Environment variables
+SESSION_ID="ses_abc123" NEW_TITLE="Bugfix PR" ./rename_session.py
+
+# As Python module
+python3 rename_session.py ses_xyz789 "Feature implementation"
+```
+
+### From Another Script/Agent
 
 ```python
-import sqlite3
+import subprocess
+from pathlib import Path
 
-db_path = "~/.local/share/opencode/opencode.db"
-session_id = "ses_25dd535caffemzyEEcQaZZFdqZ"
-new_title = "Index page redesign & centered search implementation"
+skill_dir = Path(__file__).parent  # or wherever the skill is located
+script_path = skill_dir / "renaming-opencode-sessions" / "rename_session.py"
 
-conn = sqlite3.connect(db_path)
-cursor = conn.cursor()
-
-# Check current title
-cursor.execute("SELECT id, title FROM session WHERE id=?", (session_id,))
-result = cursor.fetchone()
-if result:
-    print(f"Current: {result[1]}")
-    # Update title
-    cursor.execute("UPDATE session SET title=? WHERE id=?", (new_title, session_id))
-    conn.commit()
-    print(f"Updated to: {new_title}")
-else:
-    print("Session not found!")
-
-conn.close()
+subprocess.run([
+    "python3", str(script_path),
+    "ses_25dd535caffemzyEEcQaZZFdqZ",
+    "New Session Title"
+])
 ```
 
 ### Verification
