@@ -6,8 +6,6 @@ When the user refers to a folder without a full path, resolve using these mappin
 - "prompts" => `/home/airtonp/code/ton-anywhere/my-favorite-prompts/prompts/`
 - "metaprompts" => `/home/airtonp/code/ton-anywhere/my-favorite-prompts/metaprompt/`
 
-The user may reference these aliases in either English or Portuguese.
-
 ---
 
 ## Agent Feedback
